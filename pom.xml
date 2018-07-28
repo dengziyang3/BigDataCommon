@@ -8,20 +8,26 @@
     <artifactId>common</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.10.RELEASE</version>
+    </parent>
     <modules>
         <module>Common-util</module>
-        <module>Common-faceattribute</module>
+        <module>Common-jni</module>
+        <module>Common-zookeeper</module>
+        <module>Common-rocketmq</module>
+        <module>Common-collect</module>
         <module>Common-es</module>
         <module>Common-hbase</module>
+        <module>Common-service</module>
+        <module>Common-facealarm</module>
+        <module>Common-faceattribute</module>
         <module>Common-faceclustering</module>
         <module>Common-facedispatch</module>
         <module>Common-facedynrepo</module>
         <module>Common-facestarepo</module>
-        <module>Common-collect</module>
-        <module>Common-jni</module>
-        <module>Common-rocketmq</module>
-        <module>Common-facealarm</module>
     </modules>
 
     <properties>
@@ -38,5 +44,8 @@
         <zookeeper.version>3.4.10</zookeeper.version>
         <slf4j-log4j12.version>1.7.7</slf4j-log4j12.version>
         <log4j-core.version>2.8.2</log4j-core.version>
+        <reflections.version>0.9.10</reflections.version>
+        <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
+        <curator.version>2.12.0</curator.version>
     </properties>
 </project>

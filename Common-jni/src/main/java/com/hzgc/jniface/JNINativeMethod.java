@@ -8,6 +8,10 @@ public class JNINativeMethod implements Serializable {
         System.loadLibrary("FaceJNI");
     }
 
+    public static native void init();
+
+    public static native void initThreadNum(int threadNum);
+
     /**
      * 人脸大图检测
      * @param retResult 执行结果
