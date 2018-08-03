@@ -21,7 +21,7 @@ public class Curator {
     }
 
     private CuratorFramework connectionZookeeper(String zkAddress, int sessionTimeoutMs, int connectionTimeoutMs) {
-        RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
+        RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 5);
         CuratorFramework client = CuratorFrameworkFactory.builder()
                 .connectString(zkAddress)
                 .sessionTimeoutMs(sessionTimeoutMs)

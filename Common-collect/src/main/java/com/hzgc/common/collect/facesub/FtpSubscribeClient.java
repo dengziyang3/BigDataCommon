@@ -21,7 +21,7 @@ public class FtpSubscribeClient implements Serializable {
 
 
     public FtpSubscribeClient(String zkAddress){
-        subscribeClient = new Curator(zkAddress, 1000, 6000);
+        subscribeClient = new Curator(zkAddress, 20000, 15000);
         if (subscribeClient.nodePathExists(ftp_subscribe_path)){
             LOG.info("Ftp subscribe root path '"+ ftp_subscribe_path + "' is exists");
         } else {

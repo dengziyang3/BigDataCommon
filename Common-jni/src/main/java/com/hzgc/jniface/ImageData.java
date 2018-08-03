@@ -7,13 +7,13 @@ public class ImageData implements Serializable {
     private byte[] bImageStream;
 
     //图片类型
-    private Enum<ImageType> imageType;
+    private String imageType;
 
     public byte[] getbImageStream() { return bImageStream; }
 
     public void setbImageStream(byte[] bImageStream) { this.bImageStream = bImageStream; }
 
-    public Enum<ImageType> getImageType() { return imageType; }
+    public String getImageType() { return imageType; }
 
-    public void setImageType(Enum<ImageType> imageType) { this.imageType = imageType; }
+    public void setImageType(String imageType) { this.imageType = imageType; }
 }

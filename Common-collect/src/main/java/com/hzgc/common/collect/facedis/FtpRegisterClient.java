@@ -29,7 +29,7 @@ public class FtpRegisterClient implements Serializable{
     private Curator registerClient;
 
     public FtpRegisterClient(String zkAddress){
-        registerClient = new Curator(zkAddress, 1000, 6000);
+        registerClient = new Curator(zkAddress, 20000, 15000);
         if (registerClient.nodePathExists(ftp_register_path)){
             LOG.info("Ftp register root path '/ftp_register' is exists");
         } else {
